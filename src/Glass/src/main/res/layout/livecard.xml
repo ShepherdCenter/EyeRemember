@@ -1,0 +1,27 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001133">
+
+    <TextView
+        android:id="@+id/livecard_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:paddingBottom="100sp"
+        android:paddingLeft="@dimen/margin_large"
+        android:text="Recall"
+        android:textColor="#88eafa"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+	<TextView
+	    android:id="@+id/contact_info"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:gravity="center"
+	    android:text="2 contacts"
+	    android:textSize="20sp" />
+	
+</FrameLayout>

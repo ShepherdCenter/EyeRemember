@@ -1,0 +1,44 @@
+<resources>
+
+    <string name="app_name">EyeRemember</string>
+    
+    <!--  card names -->
+    <string name="text_addcontact">Add Contact</string>
+    <string name="text_settings">Settings</string>
+    <string name="text_status">Contacts</string>
+    <string name="text_service">Toggle Service</string>
+    
+    <string name="start_scanning">Start Scanning</string>
+    <string name="service_started">Service is running</string>
+    <string name="stop_scanning">Stop Scanning</string>
+    <string name="service_stopped">Service is stopped</string>
+    
+    <!-- preferences library -->
+    <string name="tap_to_set_angle">Tap to Set Angle</string>
+    <string name="title_activity_glass_preference">GlassPreferenceActivity</string>
+    
+    <!--  For menu  -->
+    <string name="menu_item_stop_livecarddemo">Stop</string>
+    
+    <!-- Note menu -->
+    <string name="delete_note">Delete Note</string>
+    <string name="read_aloud">Read Aloud</string>
+    
+    <!--  Contact Context Menu -->
+    <string name="add_note">Add Note</string>
+    <string name="delete_contact">Delete Contact</string>
+    <string name="view_notes">View Notes</string>
+    <string name="view_deleted_notes">View Deleted Notes</string>
+   	<string name="toggle_active">Active</string>
+   	<string name="toggle_inactive">Inactive</string>
+    
+    <!-- Contact Add menu -->
+    <string name="add_contact">Add Contact</string>
+    <string name="start_over">Start Over</string>
+    
+    <!-- for voice  -->
+    <string name="voice_trigger">help me remember</string>
+    
+      <string name="livecarddemo_voice_prompt">livecard demo is on</string>
+
+</resources>

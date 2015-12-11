@@ -16,6 +16,9 @@ gen/
 .gradle/
 build/
 /*/build/
+gradlew
+gradlew.bat
+.idea
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -25,3 +28,5 @@ proguard/
 
 # Log Files
 *.log
+Thumbs.db
+build.bat

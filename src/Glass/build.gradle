@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 'Google Inc.:Glass Development Kit Preview:19'
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "org.shepherd.recall.glass"
+        minSdkVersion 19
+        targetSdkVersion 19
+    }
+
+    signingConfigs {
+        release {
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':Service')
+    compile project(':cuXtomCamLibrary')
+    compile 'com.android.support:support-v4:21.0.2'
+    compile 'com.google.android.gms:play-services:6.5.87'
+}

@@ -1,0 +1,90 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.shepherd.recall.glass"
+    android:versionCode="9"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    
+        <!-- For free-style voice trigger and voice menus. -->
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <application tools:replace="android:label"
+        android:allowBackup="true"
+        android:name=".App"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.glass.cuxtomcam.CuxtomCamActivity"
+            android:immersive="true" >
+        </activity>
+        
+        <service android:name="org.shepherd.recall.glass.service.GlassService" />
+        
+        <receiver 
+            android:enabled="true" 
+            android:name="org.shepherd.recall.glass.BootUpReceiver">
+
+            <intent-filter>
+                    <action android:name="android.intent.action.BOOT_COMPLETED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="org.shepherd.recall.glass.MainActivity"
+            android:label="@string/app_name"
+            android:enabled="true" >
+                 
+           <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>            
+			
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voiceinput_recall" />
+        </activity>
+        
+         <activity android:name=".SettingsActivity"></activity>
+         <activity android:name=".AddContactActivity"></activity>
+         <activity android:name=".ContactsActivity"></activity>
+         <activity android:name=".NotesActivity"></activity>
+        <service android:name="org.shepherd.recall.service.BLEService" android:enabled="true" />         
+         <service android:name="org.shepherd.recall.glass.BackgroundService" />
+        
+        
+          <activity
+            android:enabled="true"
+            android:exported="true"
+            android:name=".settings.GlassPreferenceActivity"
+            android:label="@string/title_activity_glass_preference" >
+        </activity>
+
+    </application>
+
+</manifest>
+

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/contact_viewnotes"     
+        android:icon="@drawable/ic_action_view_as_list"   
+        android:title="@string/view_notes" />
+    
+    <item
+        android:id="@+id/contact_addnote"
+        android:icon="@drawable/ic_action_new_label"
+        android:title="@string/add_note" />
+
+    <item
+        android:id="@+id/contact_delete"
+        android:icon="@drawable/ic_action_cancel"
+        android:title="@string/delete_contact" />
+    <item
+        android:id="@+id/contact_view_deleted_notes"
+        android:icon="@drawable/ic_action_view_as_list"
+        android:title="@string/view_deleted_notes" />
+    <!--  
+    <item
+        android:id="@+id/toggle_active"
+        android:title="@string/toggle_active" />
+    -->
+    
+</menu>
